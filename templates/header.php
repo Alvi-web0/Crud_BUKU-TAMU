@@ -20,6 +20,9 @@
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -35,17 +38,17 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-school"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Zie BukuTamu</div>
+                <div class="sidebar-brand-text mx-3">Zie Buku Tamu</div>
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dasboard</span></a>
+                    <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item">
@@ -65,6 +68,9 @@
                     <i class="fas fa-fw fa-users"></i>
                 <span>User</span></a>
             </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -166,8 +172,6 @@
 
                 </nav>
                 <!-- End of Topbar -->
-            </div>
-        </div>
-    </div>    
-</body> 
+            
+</body>
 </html>
