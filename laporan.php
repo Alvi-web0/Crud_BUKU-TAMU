@@ -68,7 +68,6 @@ include_once('templates/header.php');
                                 <th>No. Telp/HP</th>
                                 <th>Bertemu Dengan</th>
                                 <th>Kepentingan</th>
-                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -90,12 +89,6 @@ include_once('templates/header.php');
                                         <td><?= $tamu['no_hp'] ?></td>
                                         <td><?= $tamu['bertemu'] ?></td>
                                         <td><?= $tamu['kepentingan'] ?></td>
-                                        <td>
-                                            <a class="btn btn-success" href="edit-tamu.php<?= 
-                                            $tamu['id_tamu'] ?>">Ubah</a>
-                                            <a onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')" class="btn btn-danger"
-                                            href="hapus-tamu.php?id=<?= $tamu['id_tamu'] ?>">hapus</a>
-                                        </td>
                                     </tr>
                             <?php endforeach;
                             }
