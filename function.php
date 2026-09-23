@@ -76,7 +76,7 @@ function tambah_user($data) {
 
     $query = "INSERT INTO users VALUES ('$kode', '$username', '$password_hash', '$user_role')";
 
-    mysqli_query($koneksi, $query);
+    mysqli_query ($koneksi, $query);
     return mysqli_affected_rows($koneksi);
 }
 

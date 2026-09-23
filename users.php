@@ -2,6 +2,8 @@
 require_once('function.php');
 require_once('koneksi.php');
 include_once('templates/header.php');
+
+
 ?>
 
     <!-- Begin Page Content -->
@@ -98,12 +100,14 @@ include_once('templates/header.php');
     $data = mysqli_fetch_array($query);
     $kodeuser = $data['kodeTerbesar'];
 
+    if ($kodeuser == null) {
+    $urutan = 1;
+    } else {
     $urutan = (int) substr($kodeuser, 3, 2);
+    $urutan++;
+    }
 
-    $urutan ++;
-
-    $huruf = "usr";
-    $kodeTamu = $huruf . sprintf("%02s", $urutan);
+    $kodeuser = "usr" . str_pad($urutan, 2, "0", STR_PAD_LEFT);
 ?>
     <!-- modal Tambah -->
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel"
@@ -116,7 +120,7 @@ include_once('templates/header.php');
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body  ">
                     <form method="post" action="">
                         <input type="hidden" name="id_user" id="id_user" value="<?= $kodeuser?>">
                         <div class="form-group row">

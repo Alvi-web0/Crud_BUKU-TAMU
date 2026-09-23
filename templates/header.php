@@ -1,9 +1,5 @@
 <?php
 session_start();
-
-if(isset($_SESSION['login'])) {
-    header('location:login.php');
-}
 ?>
 
 <!DOCTYPE html>
@@ -59,11 +55,15 @@ if(isset($_SESSION['login'])) {
                     <span>Dashboard</span></a>
             </li>
 
+        <?php
+        if (isset($_SESSION['role']) && $_SESSION['role'] == 'operator') :
+        ?>
             <li class="nav-item">
                 <a class="nav-link" href="buku-tamu.php">
                     <i class="fas fa-fw fa-book-open"></i>
                 <span>Buku Tamu</span></a>
             </li>
+        <?php endif; ?>
 
             <li class="nav-item">
                 <a class="nav-link" href="laporan.php">
@@ -71,11 +71,15 @@ if(isset($_SESSION['login'])) {
                 <span>Laporan</span></a>
             </li>
 
+        <?php
+        if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') :
+        ?>
             <li class="nav-item">
                 <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-users"></i>
                 <span>User</span></a>
             </li>
+        <?php endif; ?>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -179,7 +183,7 @@ if(isset($_SESSION['login'])) {
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="logout.php" >
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
