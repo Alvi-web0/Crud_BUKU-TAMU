@@ -3,18 +3,25 @@ include('koneksi.php');
 require 'vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Style\Alignment;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
 
-$sheet->setCellValue('A1', 'No');
-$sheet->setCellValue('B1', 'TANGGAL');
-$sheet->setCellValue('C1', 'NAMA_TAMU');
-$sheet->setCellValue('D1', 'ALAMAT');
-$sheet->setCellValue('E1', 'NO TELEPON/HP');
-$sheet->setCellValue('F1', 'BERTEMU DENGAN');
-$sheet->setCellValue('G1', 'KEPENTINGAN');
+$sheet->mergeCells('A1:G1');
+$sheet->setCellValue('A1', 'Laporan Buku Tamu');
+$sheet->getStyle('A1')->getFont()->setBold(true)->setSize(14);
+$sheet->getStyle('A1')->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
+$sheet->getRowDimension(1)->setRowHeight(22);
+
+$sheet->setCellValue('A2', 'No');
+$sheet->setCellValue('B2', 'TANGGAL');
+$sheet->setCellValue('C2', 'NAMA_TAMU');
+$sheet->setCellValue('D2', 'ALAMAT');
+$sheet->setCellValue('E2', 'NO TELEPON/HP');
+$sheet->setCellValue('F2', 'BERTEMU DENGAN');
+$sheet->setCellValue('G2', 'KEPENTINGAN');
 
 if(isset($_GET['card'])) {
     $p_awal = $_GET['p_awal'];

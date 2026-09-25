@@ -163,9 +163,20 @@ session_start();
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <?php
+                                $role = $_SESSION['role'];
+                                if($role =='admin') {
+                                    $nameRole ='administrator';
+                                    $gambarRole ='admin.png';
+                                } else {
+                                    $nameRole = 'operator';
+                                    $gambarRole = 'operator.jpg';
+                                }
+                                ?>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $nameRole; ?></span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="assets/images/<?= $gambarRole; ?>"
+                                    alt="<?= $nameRole; ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

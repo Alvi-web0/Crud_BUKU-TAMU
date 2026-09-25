@@ -74,8 +74,13 @@ if (isset($_GET['id'])) {
                     <div class="form-group row">
                         <label for="gambar" class="col-sm-3 col-form-label">Gambar Foto</label>
                         <div class="col-sm-8">
-                            <img src="assets/upload_gambar/<?= $data['gambar']; ?>" alt="" width="30%">
-                            <input type="file" class="form-control-file" id="gambar" name="gambar">
+                           <?php if(!empty($data['gambar'])) :?> 
+                            <img src="assets/upload_gambar/<?= $data['gambar']; ?>" alt="" width="30%"><br><br>
+                           <?php endif;?>
+                            <div class="custom-file">
+                                <input type="file" class="form-control-file" id="gambar" name="gambar">
+                                <label class="custom-file-label" for="gambar">Choose file</label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">

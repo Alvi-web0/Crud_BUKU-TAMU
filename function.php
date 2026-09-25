@@ -169,7 +169,7 @@ function uploadGambar() {
     $namaFileBaru .= '.';
     $namaFileBaru .= $ekstensiGambar;
 
-    move_uploaded_file($tmpName, 'assets/upload_gambar'.$namaFileBaru);
+    move_uploaded_file($tmpName, 'assets/upload_gambar/'.$namaFileBaru);
 
     return $namaFileBaru;
 }

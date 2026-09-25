@@ -162,6 +162,15 @@ if(($_SESSION['role']) != 'operator') {
        </div>
     </div>
 
+
+<script>
+document.querySelector('.custom-file-input').addEventListener('change', function(e) {
+    var fileName = e.target.files[0].name;
+    var nextSibling = e.target.nextElementSibling;
+    nextSibling.innerText = fileName;
+});
+</script>
+
 <?php
 include_once('templates/footer.php');
 ?>
