@@ -21,7 +21,7 @@ if(isset($_POST['tampilkan'])) {
         <h1 class="h3 mb-4 text-gray-800">Laporan Tamu</h1>
         <div class="row mx-auto d-flex justify-content-center">
             <!--- Periode Awal --->
-            <div class="col-xl-5 col-md-6 mb-4">
+            <div class="col-xl-8 col-md-10 mb-4">
                 <div class="card border border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -84,7 +84,6 @@ if(isset($_POST['tampilkan'])) {
                                 <th>No. Telp/HP</th>
                                 <th>Bertemu Dengan</th>
                                 <th>Kepentingan</th>
-                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -100,11 +99,6 @@ if(isset($_POST['tampilkan'])) {
                                         <td><?= $tamu['no_hp'] ?></td>
                                         <td><?= $tamu['bertemu'] ?></td>
                                         <td><?= $tamu['kepentingan'] ?></td>
-                                        <td>
-                                            <a class="btn btn-success" href="edit-tamu.php?id=<?= $tamu['id_tamu'] ?>">Ubah</a>
-                                            <a onclick="confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"
-                                            href="hapus-tamu.php?id=<?= $tamu['id_tamu'] ?>">Hapus</a>
-                                        </td>
                                     </tr>
                             <?php endforeach;
                             ?>

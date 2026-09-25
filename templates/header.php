@@ -166,7 +166,7 @@ session_start();
                                 <?php
                                 $role = $_SESSION['role'];
                                 if($role =='admin') {
-                                    $nameRole ='administrator';
+                                    $nameRole ='admin';
                                     $gambarRole ='admin.png';
                                 } else {
                                     $nameRole = 'operator';
