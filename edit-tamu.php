@@ -44,31 +44,31 @@ if (isset($_GET['id'])) {
                     <div class="form-group row">
                         <label for="name-tamu" class="col-sm-3 col-form-label">Nama Tamu</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="nama_tamu" name="nama_tamu" value="<?= $data['nama_tamu'] ?>">
+                            <input type="text" class="form-control" id="nama_tamu" name="nama_tamu" value="<?= $data['nama_tamu'] ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="alamat" class="col-sm-3 col-form-label">Alamat</label>
                         <div class="col-sm-8">
-                            <textarea class="form-control" id="alamat" name="alamat"><?= $data['alamat'] ?></textarea>
+                            <textarea class="form-control" id="alamat" name="alamat" required><?= $data['alamat'] ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="no_hp" class="col-sm-3 col-form-label">No. Telepon</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="no_hp" name="no_hp" value="<?= $data['no_hp'] ?>">
+                            <input type="text" class="form-control" id="no_hp" name="no_hp" value="<?= $data['no_hp'] ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="bertemu" class="col-sm-3 col-form-label">Bertemu dg.</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="bertemu" name="bertemu" value="<?= $data['bertemu'] ?>">
+                            <input type="text" class="form-control" id="bertemu" name="bertemu" value="<?= $data['bertemu'] ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="kepentingan" class="col-sm-3 col-form-label">kepentingan</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="kepentingan" name="kepentingan" value="<?= $data['kepentingan'] ?>">
+                            <input type="text" class="form-control" id="kepentingan" name="kepentingan" value="<?= $data['kepentingan'] ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">

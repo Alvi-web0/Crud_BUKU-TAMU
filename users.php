@@ -80,7 +80,7 @@ include_once('templates/header.php');
                                             <span class="text">Ganti Password</span>
                                         </button>
                                         <a class="btn btn-success" href="edit-user.php?id=<?= $user['id_user'] ?>">Ubah</a>
-                                        <a onclick="confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"
+                                        <a onclick="return confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"
                                         href="hapus-user.php?id=<?= $user['id_user'] ?>">Hapus</a>
                                     </td>
                                 </tr>
@@ -126,13 +126,13 @@ include_once('templates/header.php');
                         <div class="form-group row">
                             <label for="name-tamu" class="col-sm-3 col-form-label">Username</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="username" name="username">
+                                <input type="text" class="form-control" id="username" name="username" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="no_hp" class="col-sm-3 col-form-label">Password</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="password" name="password">
+                                <input type="password" class="form-control" id="password" name="password" minlength="6" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -170,7 +170,7 @@ include_once('templates/header.php');
                         <div class="form-group row">
                             <label for="password" class="col-sm-4 col-form-label">Password Baru</label>
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" id="password" name="password">
+                                <input type="password" class="form-control" id="password" name="password" minlength="6" required>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -181,7 +181,6 @@ include_once('templates/header.php');
                 </div>
             </div>
         </div>
-    </div>
 
 <?php
 include_once('templates/footer.php');

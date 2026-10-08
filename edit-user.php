@@ -43,7 +43,7 @@ if (isset($_GET['id'])) {
                     <div class="form-group row">
                         <label for="username" class="col-sm-3 col-form-label">username</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="username" name="username" value="<?= $data['username'] ?>">
+                            <input type="text" class="form-control" id="username" name="username" value="<?= $data['username'] ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">

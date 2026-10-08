@@ -73,7 +73,7 @@ if(($_SESSION['role']) != 'operator') {
                                     <td><?= $tamu['kepentingan']; ?></td>
                                     <td>
                                         <a class="btn btn-success" href="edit-tamu.php?id=<?= $tamu['id_tamu'] ?>">Ubah</a>
-                                        <a onclick="confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"
+                                        <a onclick="return confirm('apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"
                                         href="hapus-tamu.php?id=<?= $tamu['id_tamu'] ?>">Hapus</a>
                                     </td>
                                 </tr>
@@ -86,7 +86,6 @@ if(($_SESSION['role']) != 'operator') {
                 </div>
             </div>  
         </div>
-    </div>
     <!-- /.container-fluid -->
 <?php
     $query = mysqli_query($koneksi, "SELECT max(id_tamu) as kodeTerbesar FROM tabel_bukutamu");
